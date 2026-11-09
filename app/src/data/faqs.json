@@ -1,0 +1,144 @@
+[
+  {
+    "id": "courses",
+    "question": "Có những khóa học nào?",
+    "answer": "Có 6 khóa mẫu thuộc Tiếng Anh, Toán và Tin học. Hãy chọn môn và trình độ để xem khóa phù hợp.",
+    "aliases": [
+      "khoa hoc",
+      "hoc mon gi"
+    ],
+    "relatedIds": [
+      "fees",
+      "schedule",
+      "entry"
+    ]
+  },
+  {
+    "id": "fees",
+    "question": "Học phí bao nhiêu?",
+    "answer": "Học phí được lấy từ khóa đã chọn trong danh mục. Nếu chưa chọn khóa, hỏi người dùng muốn biết khóa nào.",
+    "aliases": [
+      "hoc phi",
+      "bao nhieu tien",
+      "gia"
+    ],
+    "relatedIds": [
+      "schedule",
+      "entry",
+      "trial"
+    ]
+  },
+  {
+    "id": "schedule",
+    "question": "Lịch học và thời lượng thế nào?",
+    "answer": "Lấy sessions, schedule và mode của khóa đã chọn; chưa chọn thì hỏi rõ.",
+    "aliases": [
+      "lich hoc",
+      "bao lau",
+      "may buoi"
+    ],
+    "relatedIds": [
+      "entry",
+      "trial",
+      "register"
+    ]
+  },
+  {
+    "id": "entry",
+    "question": "Có cần kiến thức đầu vào không?",
+    "answer": "Lấy level và audience của từng khóa. Python cơ bản, tiếng Anh giao tiếp và Excel dành cho người mới; lớp Toán theo khối lớp; TOEIC nền tảng dành cho người đã có tiếng Anh cơ bản.",
+    "aliases": [
+      "dau vao",
+      "trinh do",
+      "nguoi moi"
+    ],
+    "relatedIds": [
+      "trial",
+      "register",
+      "payment"
+    ]
+  },
+  {
+    "id": "trial",
+    "question": "Có được học thử không?",
+    "answer": "Có một buổi học thử miễn phí theo chính sách mẫu. Đặt lịch tư vấn để trao đổi; lịch tư vấn không đồng nghĩa đã giữ chỗ buổi học thử.",
+    "aliases": [
+      "hoc thu"
+    ],
+    "relatedIds": [
+      "register",
+      "payment",
+      "reserve"
+    ]
+  },
+  {
+    "id": "register",
+    "question": "Đăng ký như thế nào?",
+      "answer": "Chọn khóa rồi đặt lịch tư vấn qua điện thoại theo khung giờ. Bản demo chỉ lưu yêu cầu trên trình duyệt này, chưa gửi tới nhân viên; không xác nhận cuộc hẹn, ghi danh hay thanh toán khóa học.",
+    "aliases": [
+      "dang ky",
+      "dat lich"
+    ],
+    "relatedIds": [
+      "payment",
+      "reserve",
+      "refund"
+    ]
+  },
+  {
+    "id": "payment",
+    "question": "Thanh toán như thế nào?",
+    "answer": "Chính sách mẫu cho phép chuyển khoản hoặc thanh toán tại trung tâm sau tư vấn. App không thu tiền và không cung cấp tài khoản ngân hàng.",
+    "aliases": [
+      "thanh toan"
+    ],
+    "relatedIds": [
+      "reserve",
+      "refund",
+      "hours"
+    ]
+  },
+  {
+    "id": "reserve",
+    "question": "Có bảo lưu không?",
+    "answer": "Chính sách mẫu: bảo lưu một lần, tối đa 3 tháng; gửi yêu cầu trước khi khóa học bắt đầu.",
+    "aliases": [
+      "bao luu"
+    ],
+    "relatedIds": [
+      "refund",
+      "hours",
+      "courses"
+    ]
+  },
+  {
+    "id": "refund",
+    "question": "Có được hoàn học phí không?",
+    "answer": "Chính sách mẫu: hoàn học phí nếu hủy trước ngày khai giảng ít nhất 7 ngày. Các trường hợp khác cần tư vấn riêng.",
+    "aliases": [
+      "hoan tien",
+      "hoan hoc phi",
+      "huy khoa"
+    ],
+    "relatedIds": [
+      "hours",
+      "courses",
+      "fees"
+    ]
+  },
+  {
+    "id": "hours",
+    "question": "Khi nào có thể tư vấn?",
+    "answer": "Khung giờ tư vấn mẫu hằng ngày: 09:00, 10:00, 14:00, 15:00, 19:00, 20:00, theo giờ Việt Nam. Chỉ chọn khung giờ tương lai còn trống trong dữ liệu trình duyệt.",
+    "aliases": [
+      "gio tu van",
+      "mo cua",
+      "lien he"
+    ],
+    "relatedIds": [
+      "courses",
+      "fees",
+      "schedule"
+    ]
+  }
+]

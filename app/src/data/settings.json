@@ -1,0 +1,29 @@
+{
+  "brand": "StudyConnect",
+  "chatMode": "mock",
+  "isSample": true,
+  "timeZone": "Asia/Ho_Chi_Minh",
+  "bookingHorizonDays": 60,
+  "slots": [
+    "09:00",
+    "10:00",
+    "14:00",
+    "15:00",
+    "19:00",
+    "20:00"
+  ],
+  "goals": [
+    {
+      "id": "exam",
+      "title": "Luyện thi"
+    },
+    {
+      "id": "foundation",
+      "title": "Củng cố kiến thức"
+    },
+    {
+      "id": "skill",
+      "title": "Học kỹ năng"
+    }
+  ]
+}

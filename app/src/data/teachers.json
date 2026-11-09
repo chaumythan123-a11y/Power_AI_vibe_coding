@@ -1,0 +1,5 @@
+[
+  {"id":"teacher-python-excel","name":"Cô Minh An (nhân vật minh họa)","specialty":"Python cơ bản và ứng dụng bảng tính","introduction":"Hướng dẫn người mới thực hành từng bước với bài tập nhỏ.","courseIds":["python-basic","excel-basic"],"isSample":true},
+  {"id":"teacher-english","name":"Thầy Gia Bảo (nhân vật minh họa)","specialty":"Tiếng Anh giao tiếp và nền tảng TOEIC","introduction":"Tập trung luyện tình huống giao tiếp và bài tập ngôn ngữ cơ bản.","courseIds":["english-communication","toeic-foundation"],"isSample":true},
+  {"id":"teacher-math","name":"Cô Thanh Hà (nhân vật minh họa)","specialty":"Toán lớp 10 và lớp 12","introduction":"Hướng dẫn ôn kiến thức và luyện giải bài theo từng chủ đề.","courseIds":["math-10","math-12"],"isSample":true}
+]

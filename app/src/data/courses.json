@@ -1,0 +1,94 @@
+[
+  {
+    "id": "python-basic",
+    "title": "Python cơ bản",
+    "subject": "Tin",
+    "level": "beginner",
+    "audience": "Người mới bắt đầu",
+    "priceVnd": 990000,
+    "sessions": 12,
+    "schedule": "Tối T7 và CN",
+    "mode": "online",
+    "goals": [
+      "skill"
+    ],
+    "isSample": true
+  },
+  {
+    "id": "english-communication",
+    "title": "Tiếng Anh giao tiếp",
+    "subject": "Anh",
+    "level": "beginner",
+    "audience": "Người mới bắt đầu",
+    "priceVnd": 1200000,
+    "sessions": 24,
+    "schedule": "Tối T2 và T4",
+    "mode": "online",
+    "goals": [
+      "foundation",
+      "skill"
+    ],
+    "isSample": true
+  },
+  {
+    "id": "math-12",
+    "title": "Toán 12",
+    "subject": "Toán",
+    "level": "grade12",
+    "audience": "Học sinh lớp 12",
+    "priceVnd": 1500000,
+    "sessions": 20,
+    "schedule": "Tối T3 và T5",
+    "mode": "onsite",
+    "goals": [
+      "exam",
+      "foundation"
+    ],
+    "isSample": true
+  },
+  {
+    "id": "math-10",
+    "title": "Toán 10",
+    "subject": "Toán",
+    "level": "grade10",
+    "audience": "Học sinh lớp 10",
+    "priceVnd": 1100000,
+    "sessions": 16,
+    "schedule": "Chiều T7",
+    "mode": "onsite",
+    "goals": [
+      "foundation"
+    ],
+    "isSample": true
+  },
+  {
+    "id": "toeic-foundation",
+    "title": "TOEIC nền tảng",
+    "subject": "Anh",
+    "level": "elementary",
+    "audience": "Người đã có tiếng Anh cơ bản",
+    "priceVnd": 1800000,
+    "sessions": 20,
+    "schedule": "Tối T3 và T5",
+    "mode": "online",
+    "goals": [
+      "exam"
+    ],
+    "isSample": true
+  },
+  {
+    "id": "excel-basic",
+    "title": "Excel cơ bản",
+    "subject": "Tin",
+    "level": "beginner",
+    "audience": "Người mới bắt đầu",
+    "priceVnd": 750000,
+    "sessions": 8,
+    "schedule": "Tối T2 và T4",
+    "mode": "online",
+    "goals": [
+      "skill"
+    ],
+    "isSample": true
+  }
+]

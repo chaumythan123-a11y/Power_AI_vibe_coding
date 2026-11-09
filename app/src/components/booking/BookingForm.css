@@ -1,0 +1,35 @@
+.booking-backdrop{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:20px;background:rgba(16,28,72,.44);animation:booking-fade var(--motion-dialog) ease-out}
+.booking-dialog{width:min(100%,560px);max-height:min(92dvh,850px);overflow-y:auto;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-panel);box-shadow:0 24px 70px rgba(16,28,72,.2);padding:28px;color:var(--text-body);animation:booking-rise var(--motion-dialog) ease-out}
+.booking-dialog__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.booking-dialog__icon{display:grid;place-items:center;width:54px;height:54px;border-radius:14px;background:var(--primary-soft);color:var(--primary)}
+.booking-icon-button{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:10px;background:transparent;color:var(--text-body);cursor:pointer}
+.booking-icon-button:hover{background:var(--primary-soft)}
+.booking-dialog h2{margin:0;color:var(--text-heading);font-size:23px;line-height:1.35}
+.booking-dialog__intro{margin:9px 0 22px;font-size:14px;line-height:1.6}
+.booking-fields{display:grid;gap:7px}
+.booking-fields label,.booking-fields__row label{display:block;font-size:14px;font-weight:600;color:var(--text-heading)}
+.booking-fields label>span:not(.booking-optional),.booking-fields__row label span{color:var(--error)}
+.booking-fields input,.booking-fields select,.booking-fields textarea{display:block;width:100%;min-height:46px;margin-top:7px;padding:10px 13px;border:1px solid #CFDCEF;border-radius:var(--radius-button);background:#fff;color:var(--text-heading);font:inherit;font-size:15px;outline:none}
+.booking-fields textarea{resize:vertical;min-height:82px;line-height:1.5}
+.booking-fields input:focus,.booking-fields select:focus,.booking-fields textarea:focus{border-color:var(--primary);box-shadow:0 0 0 3px rgba(0,82,224,.12)}
+.booking-fields [aria-invalid=true]{border-color:var(--error)}
+.booking-fields__row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:4px}
+.booking-optional{color:var(--text-muted);font-weight:400}
+.booking-error{display:block;color:var(--error);font-size:12px;line-height:1.45;margin:-2px 0 3px}
+.booking-dialog__timezone{display:flex;align-items:center;gap:7px;margin:15px 0 18px;color:var(--text-muted);font-size:13px}
+.booking-save-error{padding:11px 13px;border-radius:10px;background:#FEF3F2;color:var(--error);font-size:13px}
+.booking-actions{display:flex;justify-content:flex-end;gap:10px;margin-top:20px}
+.booking-primary,.booking-secondary{min-height:44px;padding:10px 17px;border-radius:var(--radius-button);font:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:background var(--motion-fast) ease-out,border-color var(--motion-fast) ease-out,transform var(--motion-fast) ease-out}
+.booking-primary{border:1px solid var(--primary);background:var(--primary);color:#fff}
+.booking-primary:hover:not(:disabled){background:var(--primary-hover)}
+.booking-secondary{border:1px solid var(--primary);background:#fff;color:var(--primary)}
+.booking-secondary:hover:not(:disabled){background:var(--primary-soft)}
+.booking-primary:active:not(:disabled),.booking-secondary:active:not(:disabled){transform:scale(.98)}
+.booking-primary:disabled,.booking-secondary:disabled{cursor:wait;opacity:.6}
+.booking-success{text-align:center;padding:18px 0 6px}
+.booking-success svg{color:var(--success);margin-bottom:12px}
+.booking-success p{font-size:14px;line-height:1.65;margin:12px auto 24px;max-width:360px}
+@keyframes booking-fade{from{opacity:0}to{opacity:1}}
+@keyframes booking-rise{from{transform:translateY(6px)}to{transform:translateY(0)}}
+@media(max-width:600px){.booking-backdrop{padding:8px;align-items:end}.booking-dialog{width:100%;max-height:94dvh;padding:22px 18px calc(18px + env(safe-area-inset-bottom));border-radius:20px 20px 12px 12px}.booking-dialog h2{font-size:21px}.booking-fields input,.booking-fields select,.booking-fields textarea{font-size:16px}.booking-fields__row{grid-template-columns:1fr}.booking-actions{display:grid;grid-template-columns:1fr 1fr}.booking-primary,.booking-secondary{padding-inline:10px}}
+@media(prefers-reduced-motion:reduce){.booking-backdrop,.booking-dialog{animation:none}.booking-primary,.booking-secondary{transition:none}}

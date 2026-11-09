@@ -1,0 +1,36 @@
+.admin-panel{height:100%;overflow-y:auto;padding:30px 34px;color:var(--text-body)}
+.admin-panel__header{display:flex;justify-content:space-between;align-items:flex-start;gap:22px;border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:24px}
+.admin-panel__eyebrow{margin:0 0 8px!important;color:var(--primary)!important;font-size:11px!important;font-weight:700;letter-spacing:.08em}
+.admin-panel h1{font-size:25px;line-height:1.35;margin:0 0 8px;color:var(--text-heading)}
+.admin-panel__header p{font-size:14px;line-height:1.55;margin:0;max-width:520px}
+.admin-panel__counter{display:flex;align-items:center;gap:7px;flex-shrink:0;padding:13px 15px;border-radius:14px;background:var(--primary-soft);color:var(--primary);font-size:13px}
+.admin-panel__counter strong{font-size:20px}
+.admin-panel__alert{display:flex;gap:12px;border:1px solid #FECACA;border-radius:14px;background:#FEF3F2;padding:18px;color:var(--error);font-size:14px}
+.admin-panel__alert strong{color:var(--error)}
+.admin-panel__alert p{margin:5px 0 14px;line-height:1.5}
+.admin-panel__alert-actions{display:flex;flex-wrap:wrap;gap:9px}
+.admin-panel__alert-actions button{display:inline-flex;align-items:center;gap:6px;min-height:40px;border:1px solid var(--error);border-radius:9px;background:#fff;color:var(--error);padding:8px 12px;font:inherit;font-weight:600;cursor:pointer}
+.admin-panel__empty{text-align:center;padding:54px 16px}
+.admin-panel__empty span{display:grid;place-items:center;width:70px;height:70px;margin:0 auto 18px;border-radius:20px;background:var(--primary-soft);color:var(--primary)}
+.admin-panel__empty h2{font-size:18px;color:var(--text-heading);margin:0 0 9px}
+.admin-panel__empty p{margin:0 auto;max-width:350px;font-size:14px;line-height:1.6}
+.admin-panel__list{display:grid;gap:12px}
+.admin-booking{display:grid;grid-template-columns:160px minmax(0,1fr) auto;align-items:center;gap:20px;border:1px solid var(--border);border-radius:var(--radius-card);background:#fff;padding:18px}
+.admin-booking__date{display:grid;gap:5px;color:var(--text-heading)}
+.admin-booking__date strong{font-size:15px}
+.admin-booking__date span{font-size:12px;color:var(--text-muted)}
+.admin-booking__identity{display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.admin-booking__identity h2{margin:0;font-size:15px;color:var(--text-heading)}
+.admin-booking__details p{margin:5px 0 0;font-size:13px;line-height:1.5}
+.admin-booking__note{white-space:pre-wrap;overflow-wrap:anywhere;color:var(--text-body)}
+.admin-booking__status{display:inline-flex;align-items:center;border-radius:20px;padding:3px 9px;background:#FFF4DA;color:#775300;font-size:11px;font-weight:700}
+.admin-booking__status--processed{background:#DCFCE7;color:#166534}
+.admin-booking__actions button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:42px;padding:8px 12px;border-radius:var(--radius-button);font:inherit;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}
+.admin-booking__process{background:#fff;border:1px solid var(--primary);color:var(--primary)}
+.admin-booking__process:hover{background:var(--primary-soft)}
+.admin-booking__delete{background:#fff;border:1px solid #D92D20;color:var(--error)}
+.admin-booking__delete:hover{background:#FEF3F2}
+.admin-panel__footnote{margin:24px 0;font-size:12px;color:var(--text-muted);line-height:1.5}
+@media(max-width:1100px){.admin-booking{grid-template-columns:140px minmax(0,1fr)}.admin-booking__actions{grid-column:2}}
+@media(max-width:767px){.admin-panel{padding:22px 16px 90px}.admin-panel__header{display:block}.admin-panel__counter{width:max-content;margin-top:15px}.admin-booking{display:block;padding:17px}.admin-booking__date{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-bottom:12px}.admin-booking__actions{margin-top:16px}.admin-booking__actions button{width:100%;font-size:14px;min-height:44px}}
+.admin-confirm-backdrop{position:fixed;inset:0;background:rgba(16,28,72,.38);display:grid;place-items:center;z-index:90;padding:16px}.admin-confirm{width:min(400px,100%);background:#fff;border-radius:16px;padding:24px;box-shadow:0 20px 50px rgba(16,28,72,.2)}.admin-confirm h2{color:var(--text-heading);font-size:19px;margin:0 0 10px}.admin-confirm p{line-height:1.6}.admin-confirm>div{display:flex;justify-content:flex-end;gap:9px;margin-top:20px}.admin-confirm button{border-radius:9px;min-height:42px;padding:8px 13px;border:1px solid var(--primary);background:#fff;color:var(--primary);font-weight:600}.admin-confirm button:last-child{background:var(--primary);color:#fff}

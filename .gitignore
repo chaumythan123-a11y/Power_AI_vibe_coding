@@ -1,0 +1,34 @@
+# Local configuration and credentials
+**/.env
+**/.env.*
+!**/.env.example
+**/*.pem
+**/*.p12
+**/*.key
+
+# Dependencies and generated output
+**/node_modules/
+**/dist/
+**/dist-verify/
+**/.vercel/
+**/.vite-cache/
+**/*.tsbuildinfo
+**/coverage/
+**/.cache/
+
+# Local QA artifacts, archives, profiles and runtime logs
+/qa/
+/app/qa/
+*.zip
+*.log
+*.jsonl
+**/*-profile/
+**/browser-profile/
+*.mp4
+*.mov
+*.webm
+*.tmp
+
+# OS/editor files
+.DS_Store
+Thumbs.db

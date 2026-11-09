@@ -1,0 +1,11 @@
+import coursesJson from './courses.json';
+import faqsJson from './faqs.json';
+import settingsJson from './settings.json';
+import teachersJson from './teachers.json';
+import type { Course,Faq,Settings,Teacher } from '../types';
+export const courses = coursesJson as Course[];
+export const faqs = faqsJson as Faq[];
+export const settings = settingsJson as Settings;
+export const teachers = teachersJson as Teacher[];
+export const formatVnd = (value:number) => new Intl.NumberFormat('vi-VN').format(value)+'đ';
+export const modeLabel = (mode:Course['mode']) => mode==='online'?'Trực tuyến':'Tại trung tâm';

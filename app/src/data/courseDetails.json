@@ -1,0 +1,428 @@
+{
+  "python-basic": {
+    "overview": "Bắt đầu từ những dòng lệnh đầu tiên, luyện tư duy giải quyết vấn đề và tự xây một chương trình Python nhỏ có thể sử dụng trong học tập.",
+    "prerequisites": "Không cần biết lập trình. Cần máy tính có thể cài Python, thao tác tệp cơ bản và thời gian luyện tập giữa các buổi.",
+    "outcomes": [
+      "Viết chương trình sử dụng biến, điều kiện, vòng lặp và hàm.",
+      "Xử lý danh sách, từ điển và đọc ghi dữ liệu từ tệp.",
+      "Tìm lỗi cơ bản, kiểm tra đầu vào và giải thích cách chương trình hoạt động.",
+      "Hoàn thiện một ứng dụng dòng lệnh có hướng dẫn sử dụng."
+    ],
+    "modules": [
+      {
+        "title": "Làm quen với Python",
+        "sessions": 3,
+        "topics": [
+          "Cài môi trường và chạy chương trình đầu tiên",
+          "Biến, kiểu dữ liệu, nhập và xuất",
+          "Bài tập tính toán và xử lý chuỗi"
+        ]
+      },
+      {
+        "title": "Điều khiển chương trình",
+        "sessions": 3,
+        "topics": [
+          "Điều kiện và vòng lặp",
+          "Hàm và cách chia nhỏ bài toán",
+          "Thực hành trò chơi đoán số"
+        ]
+      },
+      {
+        "title": "Làm việc với dữ liệu",
+        "sessions": 3,
+        "topics": [
+          "Danh sách và từ điển",
+          "Đọc ghi tệp JSON",
+          "Xử lý lỗi và kiểm tra dữ liệu nhập"
+        ]
+      },
+      {
+        "title": "Xây dựng đồ án đầu tay",
+        "sessions": 3,
+        "topics": [
+          "Phân tích yêu cầu và chia chức năng",
+          "Lập trình, kiểm thử và sửa lỗi",
+          "Trình bày sản phẩm và nhận góp ý"
+        ]
+      }
+    ],
+    "project": {
+      "title": "Ứng dụng quản lý chi tiêu cá nhân",
+      "description": "Xây ứng dụng dòng lệnh để ghi khoản thu chi, xem danh sách và tổng hợp theo nhóm. Dữ liệu thực hành được lưu trong tệp cục bộ.",
+      "deliverables": [
+        "Mã nguồn Python với các chức năng thêm, xem và tổng hợp khoản chi",
+        "Bộ dữ liệu mẫu cùng các tình huống kiểm thử",
+        "Tệp hướng dẫn chạy và phần trình bày ngắn về sản phẩm"
+      ]
+    },
+    "assessments": [
+      {
+        "title": "Bài luyện tập sau mỗi chặng",
+        "description": "Bài tập ngắn về cú pháp, luồng điều khiển và dữ liệu; nhận góp ý để sửa lỗi."
+      },
+      {
+        "title": "Kiểm tra thực hành giữa khóa",
+        "description": "Giải một bài toán nhỏ bằng hàm và danh sách, có kiểm tra đầu vào."
+      },
+      {
+        "title": "Đánh giá đồ án cuối khóa",
+        "description": "Xem xét tính đúng của chức năng, cách tổ chức mã, kiểm thử và khả năng giải thích sản phẩm."
+      }
+    ]
+  },
+  "english-communication": {
+    "overview": "Luyện nghe và nói theo các tình huống đời sống quen thuộc, từ giới thiệu bản thân đến hỏi thông tin và trình bày ý kiến ngắn.",
+    "prerequisites": "Dành cho người mới bắt đầu. Cần thiết bị có micro, tai nghe và sẵn sàng luyện nói thường xuyên.",
+    "outcomes": [
+      "Giới thiệu bản thân và trao đổi thông tin cá nhân đơn giản.",
+      "Hỏi và trả lời trong các tình huống mua sắm, chỉ đường hoặc đặt lịch.",
+      "Nghe để tìm thông tin chính trong hội thoại ngắn, tốc độ phù hợp.",
+      "Trình bày một chủ đề quen thuộc và tự nhận ra lỗi phát âm thường gặp."
+    ],
+    "modules": [
+      {
+        "title": "Tự tin bắt đầu hội thoại",
+        "sessions": 6,
+        "topics": [
+          "Âm cơ bản và trọng âm từ",
+          "Chào hỏi, giới thiệu bản thân",
+          "Đặt câu hỏi và duy trì lượt nói"
+        ]
+      },
+      {
+        "title": "Giao tiếp hằng ngày",
+        "sessions": 6,
+        "topics": [
+          "Thói quen, sở thích và thời gian",
+          "Mua sắm và gọi món",
+          "Luyện nghe thông tin cụ thể"
+        ]
+      },
+      {
+        "title": "Xử lý tình huống thực tế",
+        "sessions": 6,
+        "topics": [
+          "Hỏi đường, di chuyển và du lịch",
+          "Đặt lịch và nhờ hỗ trợ",
+          "Diễn đạt ý kiến và yêu cầu làm rõ"
+        ]
+      },
+      {
+        "title": "Kết nối và trình bày",
+        "sessions": 6,
+        "topics": [
+          "Kể trải nghiệm đơn giản",
+          "Chuẩn bị bài nói theo chủ đề",
+          "Đóng vai hội thoại và nhận phản hồi"
+        ]
+      }
+    ],
+    "project": {
+      "title": "Một ngày làm hướng dẫn viên",
+      "description": "Chuẩn bị và thực hành hội thoại giới thiệu một địa điểm quen thuộc, gợi ý lịch trình và trả lời câu hỏi của người nghe.",
+      "deliverables": [
+        "Dàn ý bài nói và danh sách từ vựng sử dụng",
+        "Bản ghi âm hoặc video hội thoại 3–5 phút",
+        "Phiếu tự đánh giá và bản sửa sau góp ý"
+      ]
+    },
+    "assessments": [
+      {
+        "title": "Bài nghe và nói theo chủ đề",
+        "description": "Kiểm tra mức độ hiểu ý chính và khả năng phản hồi trong tình huống đã học."
+      },
+      {
+        "title": "Hội thoại giữa khóa",
+        "description": "Thực hành theo cặp; góp ý về phát âm, độ rõ ý và cách tương tác."
+      },
+      {
+        "title": "Sản phẩm giao tiếp cuối khóa",
+        "description": "Đánh giá mức độ hoàn thành tình huống, từ vựng phù hợp và tiến bộ so với đầu khóa; không cam kết mức điểm chứng chỉ."
+      }
+    ]
+  },
+  "math-12": {
+    "overview": "Hệ thống hóa các chủ đề Toán 12 qua bài tập từ cơ bản đến vận dụng, kết hợp giải thích phương pháp và luyện cách trình bày lời giải.",
+    "prerequisites": "Có kiến thức đại số và hình học lớp 10–11. Bài khảo sát đầu khóa giúp xác định phần cần ôn bổ sung.",
+    "outcomes": [
+      "Đọc và phân tích đồ thị, vận dụng đạo hàm vào bài toán phù hợp.",
+      "Áp dụng nguyên hàm và tích phân trong các dạng bài đã luyện.",
+      "Giải bài toán vectơ và tọa độ trong không gian.",
+      "Phân tích dữ liệu, xác suất và lập kế hoạch ôn tập theo lỗi cá nhân."
+    ],
+    "modules": [
+      {
+        "title": "Hàm số và ứng dụng đạo hàm",
+        "sessions": 5,
+        "topics": [
+          "Sự biến thiên và cực trị",
+          "Đọc đồ thị và khảo sát hàm số",
+          "Bài toán tối ưu trong ngữ cảnh thực tế"
+        ]
+      },
+      {
+        "title": "Nguyên hàm và tích phân",
+        "sessions": 5,
+        "topics": [
+          "Các dạng nguyên hàm cơ bản",
+          "Tính tích phân và kiểm tra kết quả",
+          "Ứng dụng tính diện tích"
+        ]
+      },
+      {
+        "title": "Tọa độ trong không gian",
+        "sessions": 5,
+        "topics": [
+          "Vectơ và hệ tọa độ",
+          "Mặt phẳng, đường thẳng và mặt cầu",
+          "Bài toán khoảng cách và góc"
+        ]
+      },
+      {
+        "title": "Dữ liệu, xác suất và tổng ôn",
+        "sessions": 5,
+        "topics": [
+          "Phân tích mẫu số liệu",
+          "Xác suất có điều kiện qua tình huống",
+          "Luyện đề tổng hợp và sửa lỗi"
+        ]
+      }
+    ],
+    "project": {
+      "title": "Hồ sơ giải toán và bài toán tối ưu",
+      "description": "Phân tích một bài toán tối ưu có dữ kiện giả định, trình bày mô hình, lời giải và giới hạn áp dụng; tổng hợp các lỗi cần khắc phục.",
+      "deliverables": [
+        "Bài giải có mô hình, đồ thị và bước kiểm tra kết quả",
+        "Tập lời giải chọn lọc theo từng chủ đề",
+        "Kế hoạch ôn tập cá nhân từ kết quả kiểm tra"
+      ]
+    },
+    "assessments": [
+      {
+        "title": "Khảo sát kiến thức đầu vào",
+        "description": "Xác định kiến thức nền cần củng cố; không dùng để cam kết kết quả thi."
+      },
+      {
+        "title": "Kiểm tra theo chuyên đề",
+        "description": "Kết hợp câu hỏi ngắn và bài tự luận, chú trọng cách lập luận và lỗi thường gặp."
+      },
+      {
+        "title": "Bài tổng hợp cuối khóa",
+        "description": "Luyện phân bổ thời gian và phân tích lỗi sau bài làm; kết quả mang tính tham khảo trong khóa mẫu."
+      }
+    ]
+  },
+  "math-10": {
+    "overview": "Củng cố nền tảng Toán 10 bằng ví dụ trực quan, bài tập có hướng dẫn và các tình huống vận dụng gần gũi.",
+    "prerequisites": "Nắm các phép biến đổi đại số và kiến thức hình học THCS; có thể ôn bổ sung theo kết quả khảo sát ban đầu.",
+    "outcomes": [
+      "Sử dụng mệnh đề, tập hợp và bất phương trình trong bài tập cơ bản.",
+      "Phân tích hàm số bậc hai và giải bài toán liên quan.",
+      "Vận dụng hệ thức lượng, vectơ và tọa độ phẳng.",
+      "Đọc dữ liệu thống kê và giải thích kết quả bằng lập luận rõ ràng."
+    ],
+    "modules": [
+      {
+        "title": "Ngôn ngữ toán học và bất phương trình",
+        "sessions": 4,
+        "topics": [
+          "Mệnh đề và tập hợp",
+          "Biểu diễn miền nghiệm",
+          "Bài toán điều kiện và ràng buộc"
+        ]
+      },
+      {
+        "title": "Hàm số và đại số",
+        "sessions": 4,
+        "topics": [
+          "Hàm số bậc hai và đồ thị",
+          "Dấu của tam thức bậc hai",
+          "Phương trình và bài toán ứng dụng"
+        ]
+      },
+      {
+        "title": "Hình học và vectơ",
+        "sessions": 4,
+        "topics": [
+          "Hệ thức lượng trong tam giác",
+          "Vectơ và các phép toán",
+          "Tọa độ trong mặt phẳng"
+        ]
+      },
+      {
+        "title": "Thống kê và vận dụng tổng hợp",
+        "sessions": 4,
+        "topics": [
+          "Mô tả và phân tích dữ liệu",
+          "Bài toán đếm và xác suất cơ bản",
+          "Luyện tập tổng hợp và trình bày kết quả"
+        ]
+      }
+    ],
+    "project": {
+      "title": "Toán học quanh sân trường",
+      "description": "Sử dụng số liệu giả định hoặc phép đo phù hợp để giải một bài toán chiều cao, khoảng cách; minh họa bằng hình vẽ và giải thích sai số.",
+      "deliverables": [
+        "Bản mô tả tình huống và bảng số liệu",
+        "Hình minh họa cùng lời giải từng bước",
+        "Nhận xét về độ hợp lý của kết quả và sai số đo"
+      ]
+    },
+    "assessments": [
+      {
+        "title": "Bài tập củng cố từng buổi",
+        "description": "Theo dõi mức độ hiểu khái niệm và khả năng tự trình bày lời giải."
+      },
+      {
+        "title": "Kiểm tra giữa khóa",
+        "description": "Tập trung vào hàm số và đại số, kèm phần sửa bài có hướng dẫn."
+      },
+      {
+        "title": "Bài vận dụng cuối khóa",
+        "description": "Đánh giá lựa chọn phương pháp, tính đúng của phép tính và cách giải thích kết quả."
+      }
+    ]
+  },
+  "toeic-foundation": {
+    "overview": "Xây nền từ vựng, ngữ pháp và kỹ năng nghe đọc cho người bắt đầu làm quen với dạng bài TOEIC Listening & Reading.",
+    "prerequisites": "Đã có tiếng Anh cơ bản và đọc được câu đơn giản. Bài khảo sát giúp chọn mức bài luyện phù hợp.",
+    "outcomes": [
+      "Nhận diện dạng câu hỏi và yêu cầu của các phần nghe, đọc.",
+      "Sử dụng từ vựng thường gặp trong bối cảnh công việc và đời sống.",
+      "Áp dụng chiến lược tìm ý chính, chi tiết và loại trừ đáp án.",
+      "Theo dõi lỗi sai và xây dựng kế hoạch tự luyện tiếp theo."
+    ],
+    "modules": [
+      {
+        "title": "Nền tảng và làm quen dạng bài",
+        "sessions": 5,
+        "topics": [
+          "Khảo sát nghe đọc ban đầu",
+          "Từ loại và cấu trúc câu cơ bản",
+          "Từ vựng theo bối cảnh công việc"
+        ]
+      },
+      {
+        "title": "Luyện nghe có chiến lược",
+        "sessions": 5,
+        "topics": [
+          "Mô tả hình ảnh và hỏi đáp",
+          "Hội thoại và bài nói ngắn",
+          "Nhận diện từ khóa và cách diễn đạt lại"
+        ]
+      },
+      {
+        "title": "Luyện đọc và ngữ pháp",
+        "sessions": 5,
+        "topics": [
+          "Hoàn thành câu và đoạn văn",
+          "Đọc email, thông báo và lịch trình",
+          "Tìm thông tin và quản lý thời gian"
+        ]
+      },
+      {
+        "title": "Luyện tập tổng hợp",
+        "sessions": 5,
+        "topics": [
+          "Bài luyện kết hợp nghe và đọc",
+          "Phân tích nhóm lỗi thường gặp",
+          "Lập kế hoạch học sau khóa"
+        ]
+      }
+    ],
+    "project": {
+      "title": "Hồ sơ luyện thi cá nhân",
+      "description": "Tạo bộ tài liệu tự học gồm từ vựng theo chủ đề, nhật ký lỗi và kế hoạch luyện nghe đọc dựa trên kết quả bài thực hành.",
+      "deliverables": [
+        "Sổ từ vựng có ví dụ và cách ôn tập",
+        "Nhật ký lỗi từ các bài luyện có lời giải thích",
+        "Kế hoạch tự học 4 tuần theo điểm cần cải thiện"
+      ]
+    },
+    "assessments": [
+      {
+        "title": "Khảo sát nghe đọc đầu khóa",
+        "description": "Ghi nhận nền tảng hiện tại để định hướng luyện tập."
+      },
+      {
+        "title": "Bài kiểm tra theo kỹ năng",
+        "description": "Các bài luyện ngắn theo dạng câu hỏi, có chữa bài và giải thích đáp án."
+      },
+      {
+        "title": "Bài mô phỏng cuối khóa",
+        "description": "So sánh tiến bộ trên bài thực hành. Đây không phải kỳ thi chính thức và không cam kết điểm TOEIC."
+      }
+    ]
+  },
+  "excel-basic": {
+    "overview": "Làm quen bảng tính qua công việc thực tế: nhập dữ liệu, dùng công thức, lọc thông tin và trình bày một báo cáo dễ đọc.",
+    "prerequisites": "Biết thao tác máy tính cơ bản và có phần mềm bảng tính để thực hành. Không cần kinh nghiệm với công thức Excel.",
+    "outcomes": [
+      "Tạo bảng dữ liệu rõ ràng và định dạng số, ngày, tiền tệ phù hợp.",
+      "Sử dụng công thức và các hàm cơ bản để tính toán.",
+      "Sắp xếp, lọc và kiểm tra dữ liệu trước khi tổng hợp.",
+      "Trình bày báo cáo có biểu đồ và giải thích được các con số chính."
+    ],
+    "modules": [
+      {
+        "title": "Bắt đầu với bảng tính",
+        "sessions": 2,
+        "topics": [
+          "Ô, vùng dữ liệu và trang tính",
+          "Nhập dữ liệu và định dạng",
+          "Tổ chức bảng dễ đọc, dễ kiểm tra"
+        ]
+      },
+      {
+        "title": "Công thức và hàm cơ bản",
+        "sessions": 2,
+        "topics": [
+          "Tham chiếu tương đối và tuyệt đối",
+          "SUM, AVERAGE, MIN và MAX",
+          "IF và kiểm tra điều kiện đơn giản"
+        ]
+      },
+      {
+        "title": "Quản lý và tổng hợp dữ liệu",
+        "sessions": 2,
+        "topics": [
+          "Sắp xếp và bộ lọc",
+          "Kiểm tra dữ liệu và phát hiện lỗi",
+          "Tổng hợp theo nhóm với SUMIF, COUNTIF"
+        ]
+      },
+      {
+        "title": "Hoàn thiện báo cáo",
+        "sessions": 2,
+        "topics": [
+          "Chọn biểu đồ phù hợp",
+          "Bố trí báo cáo và thiết lập in",
+          "Kiểm tra công thức, trình bày sản phẩm"
+        ]
+      }
+    ],
+    "project": {
+      "title": "Báo cáo thu chi câu lạc bộ",
+      "description": "Xây sổ thu chi từ dữ liệu giả định, tự động tổng hợp theo hạng mục và tạo biểu đồ để theo dõi ngân sách.",
+      "deliverables": [
+        "Tệp bảng tính gồm dữ liệu gốc và báo cáo tổng hợp",
+        "Công thức tính tổng, số dư và phân loại khoản chi",
+        "Biểu đồ cùng hướng dẫn cập nhật dữ liệu mới"
+      ]
+    },
+    "assessments": [
+      {
+        "title": "Bài thực hành từng chặng",
+        "description": "Kiểm tra thao tác, tham chiếu ô và lựa chọn hàm phù hợp."
+      },
+      {
+        "title": "Bài sửa lỗi bảng tính",
+        "description": "Tìm dữ liệu sai định dạng, công thức lỗi và đối chiếu số liệu."
+      },
+      {
+        "title": "Đánh giá báo cáo cuối khóa",
+        "description": "Xem tính đúng của công thức, khả năng cập nhật dữ liệu và độ rõ ràng của báo cáo."
+      }
+    ]
+  }
+}
