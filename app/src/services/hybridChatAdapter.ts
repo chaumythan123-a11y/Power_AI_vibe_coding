@@ -34,11 +34,12 @@ function parseApiReply(value: unknown, asked: string): ApiReply | undefined {
 }
 
 function safeFallback(input: string, course: Course | undefined, notice?: string): ChatReply {
-  return {
-    message: 'Mình chưa xác thực được câu trả lời cho nội dung này. Bạn có thể hỏi lại hoặc đặt lịch tư vấn để chuyên viên hỗ trợ.',
-    faqIds: [], courseIds: [], knownFacts: [], missingFacts: ['Phản hồi chưa được xác thực'],
-    suggestions: suggestedQuestions(input, course, 'offer_booking'), action: 'offer_booking', mode: 'mock', notice,
-  };
+  return { message: 'Mình chưa xác thực được câu trả lời cho nội dung này. Bạn có thể hỏi lại hoặc đặt lịch tư vấn để chuyên viên hỗ trợ.', faqIds: [], courseIds: course ? [course.id] : [], knownFacts: [], missingFacts: ['Phản hồi chưa được xác thực'], suggestions: suggestedQuestions(input, course, 'offer_booking'), action: 'offer_booking', mode: 'mock', notice };
+}
+async function usefulFallback(mock: MockChatAdapter, input: string, contextCourseId: string | undefined, notice: string): Promise<ChatReply> {
+  if (/\b(do an|du an|project)\b/i.test(normalize(input))) return safeFallback(input, courses.find(item => item.id === contextCourseId), notice);
+  const reply = await mock.reply(input, contextCourseId);
+  return { ...reply, notice };
 }
 
 // Only route questions confidently covered by a prepared answer to the local adapter.
@@ -78,16 +79,16 @@ export class HybridChatAdapter implements ChatAdapter {
     try {
       const recent = history.filter(item => item.id !== 'welcome' && !item.id.startsWith('sample-')).slice(-4).map(item => ({ role: item.role === 'bot' ? 'model' : 'user', text: item.text.slice(0,1000) }));
       const response = await fetch('/api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message: input, contextCourseId: course?.id, history: recent }), signal: AbortSignal.timeout(30000) });
-      if (!response.ok) return safeFallback(input, course, response.status === 429 ? 'Gemini đang giới hạn lượt gọi. Vui lòng thử lại sau một phút.' : 'Hiện chưa kết nối được Gemini. Đây là phản hồi dự phòng từ app.');
+      if (!response.ok) return usefulFallback(this.mock, input, course?.id || contextCourseId, response.status === 429 ? 'Gemini đang giới hạn lượt gọi. Đây là phản hồi dự phòng từ dữ liệu mẫu.' : 'API chat không phản hồi thành công. Đây là phản hồi dự phòng từ dữ liệu mẫu.');
       const result = parseApiReply(await response.json(), input);
-      if (!result) return safeFallback(input, course, 'Phản hồi AI chưa đúng định dạng xác thực. Bạn có thể hỏi lại.');
+      if (!result) return usefulFallback(this.mock, input, course?.id || contextCourseId, 'Phản hồi AI chưa đúng định dạng xác thực. Đây là phản hồi dự phòng từ dữ liệu mẫu.');
       return {
         message: result.message, faqIds: [], courseIds: result.courseIds,
         knownFacts: result.knownFacts, missingFacts: result.missingFacts,
         suggestions: result.suggestions, action: result.action, mode: result.mode, notice: result.notice,
       };
     } catch {
-      return safeFallback(input, course, 'Gemini chưa phản hồi hoặc kết nối bị gián đoạn. Bạn có thể gửi lại câu hỏi.');
+      return usefulFallback(this.mock, input, course?.id || contextCourseId, 'Gemini chưa phản hồi hoặc kết nối bị gián đoạn. Đây là phản hồi dự phòng từ dữ liệu mẫu.');
     }
   }
 }

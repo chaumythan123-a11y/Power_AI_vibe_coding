@@ -37,7 +37,7 @@ export function selectFacts(request, knowledge) {
       else missing.push(`dữ liệu cho ${id}`);
       continue;
     }
-    const match = /^course:([^:]+):(price|schedule|audience|curriculum|project|assessment|teacher)$/.exec(id);
+    const match = /^course:([^:]+):(price|schedule|audience|curriculum|project|assessment|teacher|practice)$/.exec(id);
     if (!match) { missing.push(`dữ liệu cho ${id}`); continue; }
     const [, courseId, field] = match;
     const course = knowledge.courses?.find(item => item.id === courseId);

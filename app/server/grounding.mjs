@@ -52,6 +52,7 @@ function requestedKnownFields(text) {
   if (has(text, /\b(lo trinh|chuong trinh hoc|noi dung khoa|hoc nhung gi|cac giai doan)\b/)) fields.push('curriculum');
   if (has(text, /\b(do an|san pham cuoi khoa|du an cuoi khoa)\b/) && !has(text, /\b(do an .{0,30} ve |ve sach|ve chu de|tu chon)\b/)) fields.push('project');
   if (has(text, /\b(bai kiem tra|kiem tra gi|danh gia nhu the nao|hinh thuc danh gia)\b/)) fields.push('assessment');
+  if (has(text, /\b(bai tap|bai thuc hanh|bai luyen tap|bai tap mau)\b/)) fields.push('practice');
   if (has(text, /\b(giao vien|giang vien|ai day|ai dung lop|nguoi huong dan|nguoi day|thay co|thay nao|co nao|thay do|co do|ai phu trach|ten nguoi day)\b/)) fields.push('teacher');
   return unique(fields);
 }
@@ -138,12 +139,14 @@ export function groundedReply(question, contextCourseId, knowledge) {
   const known = [...policy];
   if (asksCatalog) known.push(`Có ${(knowledge.courses || []).length} khóa mẫu: ${(knowledge.courses || []).map(course => course.title).join(', ')}.`);
   if (fields.length && courses.length) for (const course of courses) known.push(...courseFacts(course, fields, knowledge));
+  if (fields.includes('practice') && courses.length) missing.push('bài tập mẫu cụ thể của khóa học');
   if (fields.includes('teacher') && courses.length && !courses.some(course => knowledge.teachers?.some(teacher => teacher.courseIds.includes(course.id)))) missing.push('giáo viên phụ trách khóa học');
   if (fields.length && !courses.length && !policy.length && !missing.length) {
     return response('Bạn muốn hỏi về khóa học nào? Hãy chọn khóa trong danh mục hoặc nêu tên khóa.', 'clarify', [], [], [], question, fields, []);
   }
   if (missing.length) {
-    const message = `${known.join(' ')} ${known.length && !fields.includes('teacher') ? 'Đây là dữ liệu mẫu. ' : ''}Mình chưa có thông tin mẫu đã xác thực về ${unique(missing).join(', ')} nên không thể xác nhận thay trung tâm. Bạn có thể đặt lịch tư vấn để chuyên viên kiểm tra cụ thể.`.trim();
+    const practiceNote = fields.includes('practice') && courses.length ? `Dữ liệu của ${courses[0].title} hiện chưa có bài tập mẫu cụ thể; mình không muốn tự bịa nội dung. ` : '';
+    const message = `${known.join(' ')} ${practiceNote}${known.length && !fields.includes('teacher') ? 'Đây là dữ liệu mẫu. ' : ''}Mình chưa có thông tin mẫu đã xác thực về ${unique(missing).join(', ')} nên không thể xác nhận thay trung tâm. Bạn có thể đặt lịch tư vấn để chuyên viên kiểm tra cụ thể.`.trim();
     return response(message, 'offer_booking', courses.map(course => course.id), known, unique(missing), question, fields, courses);
   }
   if (known.length) {
@@ -159,6 +162,8 @@ function response(message, action, courseIds, knownFacts, missingFacts, question
 }
 
 export function safeFallback(question, contextCourseId, knowledge, reason = 'Mình chưa có đủ thông tin mẫu đã xác thực để trả lời chắc chắn.') {
+  const grounded = groundedReply(question, contextCourseId, knowledge);
+  if (grounded) return { ...grounded, mode: 'mock', notice: reason };
   const courses = selectedCourses(question, contextCourseId, knowledge);
   return response(`${reason} Bạn có thể đặt lịch tư vấn để chuyên viên kiểm tra và trả lời cụ thể.`,
     'offer_booking', courses.map(course => course.id), [], ['thông tin cần tư vấn'], question, [], courses);

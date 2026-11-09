@@ -2,7 +2,7 @@
   {
     "id": "courses",
     "question": "Có những khóa học nào?",
-    "answer": "Có 6 khóa mẫu thuộc Tiếng Anh, Toán và Tin học. Hãy chọn môn và trình độ để xem khóa phù hợp.",
+    "answer": "Có 6 khóa mẫu: Python cơ bản, Tiếng Anh giao tiếp, Toán 12, Toán 10, TOEIC nền tảng và Excel cơ bản.",
     "aliases": [
       "khoa hoc",
       "hoc mon gi"

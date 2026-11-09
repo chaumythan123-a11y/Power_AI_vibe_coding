@@ -67,6 +67,7 @@ export function understandRequest({ message, history = [], contextCourseId, know
     && !studyPlan) requestedFields.push('curriculum');
   if (courseProject) requestedFields.push('project');
   if (has(text, /\b(bai kiem tra|kiem tra gi|danh gia khoa|hinh thuc danh gia)\b/)) requestedFields.push('assessment');
+  if (has(text, /\b(bai tap|bai thuc hanh|bai luyen tap|bai tap mau)\b/)) requestedFields.push('practice');
   if (has(text, /\b(giao vien|giang vien|ai day|ai dung lop|nguoi huong dan|thay co|thay nao|co nao|thay do|co do|ai phu trach|ten nguoi day)\b/)) requestedFields.push('teacher');
 
   const faqIds = [];

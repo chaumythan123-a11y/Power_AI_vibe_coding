@@ -23,6 +23,10 @@ export class MockChatAdapter implements ChatAdapter {
   const context=courses.find(c=>c.id===contextCourseId);
   const faq=findFaq(input,faqs);
   const course=explicit||context;
+  if (course && /\b(bai tap|bai thuc hanh|bai luyen tap|bai tap mau)\b/.test(normalize(input))) return {
+    message:`Mình chưa có bài tập mẫu cụ thể trong dữ liệu của ${course.title}. Dữ liệu hiện có mới mô tả lộ trình, chủ đề và đồ án; bạn có thể đặt lịch tư vấn để hỏi thêm.`,
+    faqIds:[], courseIds:[course.id], suggestions:['Lộ trình Python cơ bản gồm những gì?','Python cơ bản có đồ án mẫu gì?','Đặt lịch tư vấn như thế nào?'], action:'offer_booking', mode:'mock'
+  };
   if(hasUnsupportedSpecificCourse(input,courses)||/\b(cam ket|dam bao|chac chan)\b/.test(normalize(input))) return {message:'Mình chưa có dữ liệu mẫu để xác nhận điều đó. Bạn có thể đặt lịch tư vấn để được trao đổi cụ thể.',faqIds:[],courseIds:[],suggestions:generic,action:'offer_booking',mode:'mock'};
   if(explicit&&!faq) return {message:`Mình tìm thấy khóa mẫu ${explicit.title}, phù hợp với ${explicit.audience.toLowerCase()}. Khóa có ${explicit.sessions} buổi, lịch ${explicit.schedule}, học phí ${formatVnd(explicit.priceVnd)}.`,faqIds:[],courseIds:[explicit.id],suggestions:['Học phí bao nhiêu?','Lịch học và thời lượng thế nào?','Đăng ký như thế nào?'],action:'answer',mode:'mock'};
   if(faq){
