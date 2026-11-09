@@ -65,7 +65,14 @@ export function createChatHandler({ apiKey, model = 'gemini-2.5-flash', fetchImp
     report({event:'final',route:'harness',result:'fallback',upstreamCalls:outcome.attempts,repairCount:Math.max(0,outcome.attempts-1),validationCodes:outcome.validationCodes,failure:outcome.failure});
     if (outcome.failure === 'auth') return result(502,{error:'Gemini chưa được xác thực. Hãy kiểm tra cấu hình server.'});
     if (outcome.failure === 'quota') return result(429,{error:'Gemini đang giới hạn lượt sử dụng. Vui lòng thử lại sau.'});
-    if (request.kind === 'faq' && grounded) return result(200,{...grounded,mode:'mock',notice:'Gemini chưa trả lời hợp lệ; đây là dữ liệu mẫu dự phòng.'});
+    if (request.kind === 'faq' && grounded) {
+      const notice = outcome.failure === 'network' || outcome.failure === 'deadline'
+        ? 'Gemini không kết nối được; đây là dữ liệu mẫu dự phòng.'
+        : outcome.failure === 'quota'
+          ? 'Gemini đang giới hạn lượt dùng; đây là dữ liệu mẫu dự phòng.'
+          : 'Gemini chưa trả lời hợp lệ; đây là dữ liệu mẫu dự phòng.';
+      return result(200,{...grounded,mode:'mock',notice});
+    }
     if (request.kind === 'study_plan') return result(200,{...safeFallback(body.message,body.contextCourseId,knowledge,'Mình chưa tạo đủ kế hoạch theo số ngày và thời lượng bạn yêu cầu.'),notice:'Kế hoạch chưa hoàn chỉnh. Bạn có thể thử lại câu hỏi.'});
     return result(502,{error:outcome.failure==='validation'?'Phản hồi Gemini chưa đạt kiểm tra; vui lòng thử lại.':'Gemini phản hồi quá lâu hoặc mất kết nối. Vui lòng thử lại.'});
   };
